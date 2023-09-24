@@ -13,34 +13,25 @@ Starter Code:
 
 typescriptCopy code */
 /* class Studentu  */
-    // Define the properties here
-    /* let studentName: string
-    let studentAge: number
-    let studentGrade: number */
-    // Define the constructor here
-    
-    // Define the displayInfo method here
-
-    // Define the isPassing method here
-
-
+// Define the properties here
+/* let studentName: string
+let studentAge: number
+let studentGrade: number */
+// Define the constructor here
+// Define the displayInfo method here
+// Define the isPassing method here
 // Instantiate a new student object and call the methods to test your class
-/* 
+/*
 With this, students can fill in the class details using the information provided. */
-
-class Student{
-
-     studentName: string
-     studentAge: number
-    studentGrade: number
-
-    constructor(sName:string,sAge:number,sGrade:number){
-        this.studentName=sName,
-        this.studentAge=sAge,
-        this.studentGrade=sGrade
+var Student = /** @class */ (function () {
+    function Student(sName, sAge, sGrade) {
+        this.studentName = sName,
+            this.studentAge = sAge,
+            this.studentGrade = sGrade;
     }
-    displayInfo():string{return `${this.studentAge} ago, ${this.studentName} was born. Now he/she has ${this.studentGrade}`}
-    isPassing(gradeThreshold: number):boolean{
-        return gradeThreshold >20 ? true : false 
-    }
-}
+    Student.prototype.displayInfo = function () { return "".concat(this.studentAge, " ago, ").concat(this.studentName, " was born. Now he/she has ").concat(this.studentGrade); };
+    Student.prototype.isPassing = function (gradeThreshold) {
+        return gradeThreshold > 20 ? true : false;
+    };
+    return Student;
+}());
